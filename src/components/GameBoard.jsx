@@ -21,7 +21,7 @@ export default function GameBoard({onSelectSquare, activePlayerSymbol}) {
     onSelectSquare();
   }
   return (
-    <ol id="game-board" className="highlight-player">
+    <ol id="game-board">
       {gameBoard.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
