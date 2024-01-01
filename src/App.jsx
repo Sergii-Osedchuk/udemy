@@ -12,7 +12,9 @@ function App() {
     setSelectedPlayer((prevSelectedPlayer) => (prevSelectedPlayer === 'X' ? 'O' : 'X'));
     setGameTurns((prevTurns) => {
       let currentPlayer = 'X';
-      (prevTurns[0].player === 'X' && prevTurns.length > 0) ? currentPlayer = 'O' : currentPlayer = 'X';
+      if (prevTurns.length > 0 && prevTurns[0].player === 'X') {
+        currentPlayer = 'O';
+      };
       const updatedTurns = [{ square : {row: rowIndex, col: colIndex}, player: currentPlayer}, ...prevTurns];
         return updatedTurns;
     }); 
