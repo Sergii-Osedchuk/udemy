@@ -24,12 +24,12 @@ function App() {
     <main>
       <div id='game-container'>
         <ol id='players' className="highlight-player">
-          <Player initialName='Player1' symbol='X' isActive={selectedPlayer === 'X'}/>
-          <Player initialName='Player2' symbol='O' isActive={selectedPlayer === 'O'}/>
+          <Player initialName='Player1' symbol='X' isActive={selectedPlayer === 'X'} />
+          <Player initialName='Player2' symbol='O' isActive={selectedPlayer === 'O'} />
         </ol>
-        <GameBoard onSelectSquare = {handleSelectedSquare} turns={gameTurns}/>
+        <GameBoard onSelectSquare = {handleSelectedSquare} turns={gameTurns} />
       </div>
-      <Log />
+      <Log turns={gameTurns} />
     </main>
   )
 }
